@@ -1,0 +1,28 @@
+﻿@model Quiz.Web.Areas.Administration.ViewModels.Quotes.QuoteInputModel
+
+@using (Html.BeginForm("Create", "Quotes", new { area = GlobalConstants.AdminArea }, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div id="container" class="form-horizontal">
+        @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
+        <div class="row container">
+            <div class="col-md-4">
+                @Html.EditorFor(m => m.Content)
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div>@Html.LabelFor(m => m.selectedAuthor)</div>
+                    @Html.DropDownListFor(m => m.selectedAuthor, Model.AuthorsList, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="row container">
+            <div class="col-md-12">
+                <div class="form-group">
+                    @Html.Submit("Save", new { @class = "btn btn-primary" })
+                </div>
+            </div>
+        </div>
+    </div>
+}

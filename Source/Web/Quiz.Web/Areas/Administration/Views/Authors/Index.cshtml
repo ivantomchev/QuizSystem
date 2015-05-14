@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Authors";
+}
+
+@Html.Partial("_ModalDialogPartial")
+
+<div class="row">
+    <h2>@ViewBag.Title</h2>
+</div>
+
+<div class="row">
+    @Html.ActionLink("New Author", "Create", "Authors", new { area = GlobalConstants.AdminArea }, new { @class = "btn btn-default" })
+</div>
+<hr>
+<div class="row" id="update-target">
+    @Html.Action("ReadData", "Authors", new { area = GlobalConstants.AdminArea })
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/scroll-to-top")
+}

@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Quiz.Web.Areas.Administration.ViewModels.Questions.QuestionIndexViewModel>
+@{
+    ViewBag.Title = "Questions";
+}
+
+@*@Html.Partial("_ModalDialogPartial")*@
+
+<div class="row">
+    <h2>@ViewBag.Title</h2>
+</div>
+<div class="row">
+    @Html.ActionLink("New Question", "Create", "Questions", new { area = Quiz.Common.GlobalConstants.AdminArea }, new { @class = "btn btn-default" })
+</div>
+<hr>
+<div class="row" id="update-target">
+    @Html.Action("ReadData", "Questions", new { area = Quiz.Common.GlobalConstants.AdminArea })
+</div>

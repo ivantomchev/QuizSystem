@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{71F67370-B274-459A-B08E-86B05B4B8EE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{58374EC0-CB4C-4718-AB02-7BBDA2AA77E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{19697B55-6075-4AA1-9838-FF379DEDB123}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Data.Common", "Data\Quiz.Data.Common\Quiz.Data.Common.csproj", "{038AE1B2-1EF7-453F-A915-AC958EC71A21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Data.Models", "Data\Quiz.Data.Models\Quiz.Data.Models.csproj", "{B1BB9A97-1987-4135-B75E-6FB53C7F633B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Data", "Data\Quiz.Data\Quiz.Data.csproj", "{023AB735-DA95-433C-965E-BA101F5C43B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Web", "Web\Quiz.Web\Quiz.Web.csproj", "{EB336122-1290-4057-998B-800D1BA06C3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Web.Infrastructure", "Web\Quiz.Web.Infrastructure\Quiz.Web.Infrastructure.csproj", "{31CECFA9-BF8A-4F68-B60D-721BC2F47704}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quiz.Common", "Common\Quiz.Common\Quiz.Common.csproj", "{B81E4EBD-B040-45BB-BE7B-31795730C794}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{038AE1B2-1EF7-453F-A915-AC958EC71A21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{038AE1B2-1EF7-453F-A915-AC958EC71A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{038AE1B2-1EF7-453F-A915-AC958EC71A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{038AE1B2-1EF7-453F-A915-AC958EC71A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1BB9A97-1987-4135-B75E-6FB53C7F633B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1BB9A97-1987-4135-B75E-6FB53C7F633B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1BB9A97-1987-4135-B75E-6FB53C7F633B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1BB9A97-1987-4135-B75E-6FB53C7F633B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{023AB735-DA95-433C-965E-BA101F5C43B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{023AB735-DA95-433C-965E-BA101F5C43B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{023AB735-DA95-433C-965E-BA101F5C43B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{023AB735-DA95-433C-965E-BA101F5C43B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB336122-1290-4057-998B-800D1BA06C3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB336122-1290-4057-998B-800D1BA06C3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB336122-1290-4057-998B-800D1BA06C3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB336122-1290-4057-998B-800D1BA06C3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CECFA9-BF8A-4F68-B60D-721BC2F47704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CECFA9-BF8A-4F68-B60D-721BC2F47704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CECFA9-BF8A-4F68-B60D-721BC2F47704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CECFA9-BF8A-4F68-B60D-721BC2F47704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B81E4EBD-B040-45BB-BE7B-31795730C794}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B81E4EBD-B040-45BB-BE7B-31795730C794}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B81E4EBD-B040-45BB-BE7B-31795730C794}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B81E4EBD-B040-45BB-BE7B-31795730C794}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{038AE1B2-1EF7-453F-A915-AC958EC71A21} = {71F67370-B274-459A-B08E-86B05B4B8EE9}
+		{B1BB9A97-1987-4135-B75E-6FB53C7F633B} = {71F67370-B274-459A-B08E-86B05B4B8EE9}
+		{023AB735-DA95-433C-965E-BA101F5C43B6} = {71F67370-B274-459A-B08E-86B05B4B8EE9}
+		{EB336122-1290-4057-998B-800D1BA06C3A} = {19697B55-6075-4AA1-9838-FF379DEDB123}
+		{31CECFA9-BF8A-4F68-B60D-721BC2F47704} = {19697B55-6075-4AA1-9838-FF379DEDB123}
+		{B81E4EBD-B040-45BB-BE7B-31795730C794} = {58374EC0-CB4C-4718-AB02-7BBDA2AA77E2}
+	EndGlobalSection
+EndGlobal

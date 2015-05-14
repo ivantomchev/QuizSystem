@@ -1,0 +1,16 @@
+﻿<div class="row text-center">
+    <h2>Choose Mode</h2>
+</div>
+
+<hr />
+
+<div class="row text-center">
+
+    <div class="col-md-6">
+        @Ajax.ActionLink("Binary Mode", "BinaryMode", "Quiz", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "master-update-target", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-lg btn-primary" })
+    </div>
+    <div class="col-md-6">
+        @Ajax.ActionLink("Multi Choice Mode", "MultiChoiceMode", "Quiz", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "master-update-target", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-lg btn-primary" })
+    </div>
+
+</div>

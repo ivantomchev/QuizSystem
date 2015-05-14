@@ -1,0 +1,31 @@
+﻿@model Quiz.Web.ViewModels.Questions.BinaryModeQuestionViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Who Said It?</div>
+            <div class="panel-body">
+                <span> @Html.DisplayNameFor(m => m.QuoteContent) :</span>
+                <i>"@Html.DisplayFor(m => m.QuoteContent)"</i>
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="text-center">
+                       <h3>@Html.DisplayFor(m => m.Author.Name) ?</h3>
+                    </div>
+                    <div id="update-target">
+
+                        <div class="col-md-6">
+                            @Ajax.ActionLink("YES", "CheckQuestionBinary", new { AuthorId = Model.Author.Id, QuoteId = Model.QuoteId, Answer = true }, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "update-target", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-success" })
+                        </div>
+
+                        <div class="col-md-6">
+                            @Ajax.ActionLink("NO", "CheckQuestionBinary", new { AuthorId = Model.Author.Id, QuoteId = Model.QuoteId, Answer = false }, new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "update-target", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-danger pull-right" })
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

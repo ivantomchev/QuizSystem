@@ -1,0 +1,16 @@
+﻿@model Quiz.Web.Areas.Administration.ViewModels.Questions.QuestionDetailsViewModel
+
+
+<div>
+    @Model.Quote
+</div>
+
+<div>
+        @foreach (var item in Model.Options)
+        {
+            <div class="radio">
+                <label><input type="radio" name="optradio" value="@item.IsCorrect">@item.Author.Name</label>
+            </div>
+        }
+</div>
+

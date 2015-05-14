@@ -1,0 +1,11 @@
+﻿@model Quiz.Web.ViewModels.Questions.AnswerViewModel
+
+<div class="text-center">
+    <h3>
+        @Html.DisplayFor(m => m.Message)  <span class="label label-danger">@Html.DisplayFor(m => m.AuthorName)</span>
+    </h3>
+
+    <div id="next-button">
+        @Ajax.ActionLink("Next", "NextQuestionMultiChoice", new { Id = ViewBag.Current }, new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "main-update", InsertionMode = InsertionMode.Replace }, new { @class = "btn btn-primary" })
+    </div>
+</div>

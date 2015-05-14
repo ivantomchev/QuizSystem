@@ -1,0 +1,102 @@
+﻿@model Quiz.Web.ViewModels.Questions.MultipleChoiceQuestionFromViewModel
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Who Said It?</div>
+            <div class="panel-body">
+                <span> @Html.DisplayNameFor(m => m.QuoteContent) :</span>
+                <i>"@Html.DisplayFor(m => m.QuoteContent)"</i>
+                
+            </div>
+
+            <div class="panel-footer">
+
+                <div id="update-target">
+
+                    @using (Ajax.BeginForm("CheckQuestionMultiChoice", "Quiz", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "update-target", InsertionMode = InsertionMode.Replace }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
+                            <div class="row container">
+                                <div class="col-md-12">
+                                    @Html.HiddenFor(m => m.QuoteId)
+                                    <div class="radio">
+                                        @foreach (var option in Model.Options)
+                                        {
+                                            <div class="form-group">
+                                                <label for="@option.Author.Name">@option.Author.Name</label>
+                                                @Html.RadioButtonFor(m => m.AnswerId, option.Author.Id, new { Id = option.Author.Name })
+                                            </div>
+                                        }
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row container">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.Submit(new { value = "Submit Answer", @class = "btn btn-success" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+@*<div class="row">
+    <div class="col-md-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">Who Said It?</div>
+            <div class="panel-body">
+                @Html.DisplayFor(m => m.QuoteContent)
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="update-target">
+
+    @using (Ajax.BeginForm("CheckQuestionMultiChoice", "Quiz", new AjaxOptions { HttpMethod = "POST", UpdateTargetId = "update-target", InsertionMode = InsertionMode.Replace }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            @Html.ValidationSummary(true, string.Empty, new { @class = "text-danger" })
+            <div class="row container">
+                <div class="col-md-12">
+                    @Html.HiddenFor(m => m.QuoteId)
+                    <div class="radio">
+                        @foreach (var option in Model.Options)
+                        {
+                            <div class="form-group">
+                                <label for="@option.Author.Name">@option.Author.Name</label>
+                                @Html.RadioButtonFor(m => m.AnswerId, option.Author.Id, new { Id = option.Author.Name })
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class="row container">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        @Html.Submit(new { value = "Submit Answer", @class = "btn btn-primary" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>*@
